@@ -1,0 +1,20 @@
+export type CardProps = {
+  image?: string;
+  category?: string;
+  isActive?: boolean;
+  noOfClasses?: number;
+  price?: number;
+  variant?: string;
+  profileName?: string;
+  profileImage?: string;
+  time?: string;
+  batchName?: string;
+  commentedText?: string;
+  courseName?: string;
+  discussionText?: string;
+  instructorName?: string;
+  instructorImage?: string;
+  instructorDesignation?: string;
+  instructorBio?: string;
+  socialMediaLinks?: Array<{ name: string; url: string }>;
+};

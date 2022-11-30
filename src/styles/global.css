@@ -1,0 +1,96 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+/* this will add extra font into the project  as a class name of tailwind css*/
+
+@font-face {
+  font-family: "Segoe_UI_PRIMARY";
+  src: url("../../public/font/SegeoUI/Segoe_UI.woff");
+}
+
+@font-face {
+  font-family: "Segoe_UI_ITALIC";
+  src: url("../../public/font/SegeoUI/Segoe_UI_Italic.woff");
+}
+
+@font-face {
+  font-family: "Segoe_UI_BOLD";
+  src: url("../../public/font/SegeoUI/Segoe_UI_Bold.woff");
+}
+
+@font-face {
+  font-family: "Segoe_UI_ITALIC_BOLD";
+  src: url("../../public/font/SegeoUI/Segoe_UI_Bold_Italic.woff");
+}
+
+/* this will add some extra reusable css in component layer */
+@layer components { 
+  .btn {
+    @apply p-5 bg-brandColor-blue text-brandColor-white font-bold text-center 
+  }
+  .button_v_1_large { /* here large mean large screen device for button variant one style */
+    @apply bg-brandColor-white text-brandColor-black-dark font-bold font-Segoe_UI_Bold shadow-xl rounded-full h-48 w-48 hover:text-brandColor-blue-light duration-150
+    
+   
+  }
+
+  .button_v_2_large { /* here large mean large screen device for button variant two style */
+    @apply 
+    bg-brandColor-blue-dark 
+    text-brandColor-white font-Segoe_UI_Primary font-semibold  rounded-lg h-16  w-80 text-center text-lg uppercase -tracking-tight
+
+     hover:border-brandColor-black-light border 
+    hover:border-collapse
+    hover:bg-transparent
+    hover:text-brandColor-black-light
+    duration-150
+    
+  }
+  .button_v_3_large { /* here large mean large screen device for button variant three style */
+    @apply 
+    border-brandColor-black-light border border-collapse 
+    bg-transparent
+    text-brandColor-black-light font-Segoe_UI_Primary font-bold  rounded-lg h-16  w-80 text-center text-lg capitalize -tracking-tight
+
+    hover:bg-brandColor-blue-dark 
+    hover:text-brandColor-white 
+    duration-150
+  }
+
+  .button_v_4_large { /* here large mean large screen device for button variant four style */
+    @apply 
+    bg-brandColor-blue-dark 
+    text-brandColor-white font-Segoe_UI_Primary font-semibold  rounded-full text-center text-lg capitalize -tracking-tight w-32 h-16
+    
+    hover:border-brandColor-black-light border 
+    hover:border-collapse
+    hover:bg-transparent
+    hover:text-brandColor-black-light
+    duration-150
+  }
+}
+
+
+@layer components{
+
+.card{
+  @apply rounded-[1rem] box-border hover:-translate-y-0.5 hover:cursor-pointer shadow-2xl transition-all duration-300 dark:shadow-[0_1px_3px_4px_rgba(255,255,255,0.3)]
+}
+
+.card-cover-image{
+  @apply rounded-t-[1rem] object-cover
+}
+ 
+.text-dark-light{
+  @apply text-brandColor-black dark:text-brandColor-white-primary
+}
+
+.box_shadow_dark_light{
+     @apply  shadow-lg dark:shadow-brandColor-white-primary
+}
+ 
+
+}
